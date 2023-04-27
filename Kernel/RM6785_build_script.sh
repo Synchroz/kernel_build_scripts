@@ -8,8 +8,8 @@ deps() {
     echo "Cloning dependencies"
         
     if [ ! -d "clang" ];then
-	    git clone --depth=1 https://gitlab.com/dakkshesh07/neutron-clang.git clang
-	    KBUILD_COMPILER_STRING="Neutron Clang 16"
+	    git clone --depth=1 https://gitlab.com/Amritorock/clang-r450784d.git clang
+	    KBUILD_COMPILER_STRING="AOSP Clang 14"
 	    fi
     echo "Done"
 }
