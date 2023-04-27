@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # clone repo
-git clone --depth=1 https://github.com/anupamroy777/android_kernel_realme_RM6785.git -b full-lto
-cd android_kernel_realme_RM6785
+git clone --depth=1 https://github.com/EvilAnsh/kernel_realme_RM6785.git -b lineage-20
+cd kernel_realme_RM6785
 # Dependencies
 deps() {
     echo "Cloning dependencies"
@@ -24,11 +24,11 @@ PATH="${PWD}/clang/bin:${PATH}"
 export KBUILD_COMPILER_STRING
 ARCH=arm64
 export ARCH
-KBUILD_BUILD_HOST=Anupam_Roy
+KBUILD_BUILD_HOST=Ansh_Singh
 export KBUILD_BUILD_HOST
-KBUILD_BUILD_USER="Gorilla669"
+KBUILD_BUILD_USER="EvilAnsh"
 export KBUILD_BUILD_USER
-REPO_URL="https://github.com/anupamroy777/android_kernel_realme_RM6785.git"
+REPO_URL="https://github.com/EvilAnsh/kernel_realme_RM6785.git"
 export REPO_URL
 DEVICE="RM6785 Devices"
 export DEVICE
@@ -121,9 +121,9 @@ make O=out ARCH="${ARCH}" "${DEFCONFIG}"
 # Zipping
 zipping() {
     cd AnyKernel || exit 1
-    zip -r9 ThunderStorm-Test-OSS-"${BRANCH}"-KERNEL-"${CODENAME}"-"${DATE}".zip ./*
+    zip -r9 Lineage-Test-OSS-"${BRANCH}"-KERNEL-"${CODENAME}"-"${DATE}".zip ./*
     curl -sL https://git.io/file-transfer | sh
-    ./transfer wet ThunderStorm-Test-OSS-"${BRANCH}"-KERNEL-"${CODENAME}"-"${DATE}".zip
+    ./transfer trs Lineage-Test-OSS-"${BRANCH}"-KERNEL-"${CODENAME}"-"${DATE}".zip
     cd ..
 }
 
