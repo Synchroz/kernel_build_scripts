@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # clone repo
-git clone --depth=1 https://github.com/EvilAnsh/kernel_realme_RM6785.git -b lineage-20
+git clone --depth=1 https://github.com/EvilAnsh/kernel_realme_RM6785.git -b pixel
 cd kernel_realme_RM6785
 # Dependencies
 deps() {
