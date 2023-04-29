@@ -115,7 +115,7 @@ make O=out ARCH="${ARCH}" "${DEFCONFIG}"
         exit 1
     fi
     
-    git clone --depth=1 https://github.com/EvilAnsh/AnyKernel33.git AnyKernel
+    git clone --depth=1 https://github.com/EvilAnsh/AnyKernel33.git -b blaze AnyKernel
     cp out/arch/arm64/boot/Image.gz-dtb AnyKernel
 }
 # Zipping
@@ -123,7 +123,7 @@ zipping() {
     cd AnyKernel || exit 1
     zip -r9 Lineage-Test-OSS-"${BRANCH}"-KERNEL-"${CODENAME}"-"${DATE}".zip ./*
     curl -sL https://git.io/file-transfer | sh
-    ./transfer trs Lineage-Test-OSS-"${BRANCH}"-KERNEL-"${CODENAME}"-"${DATE}".zip
+    ./transfer trs Blaze-Test-OSS-"${BRANCH}"-KERNEL-"${CODENAME}"-"${DATE}".zip
     cd ..
 }
 
