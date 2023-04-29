@@ -121,9 +121,9 @@ make O=out ARCH="${ARCH}" "${DEFCONFIG}"
 # Zipping
 zipping() {
     cd AnyKernel || exit 1
-    zip -r9 Lineage-Test-OSS-"${BRANCH}"-KERNEL-"${CODENAME}"-"${DATE}".zip ./*
+    zip -r9 Blaze-Test-OSS-"${BRANCH}"-KERNEL-"${CODENAME}"-"${DATE}".zip ./*
     curl -sL https://git.io/file-transfer | sh
-    ./transfer trs Blaze-Test-OSS-"${BRANCH}"-KERNEL-"${CODENAME}"-"${DATE}".zip
+    ./transfer fio Blaze-Test-OSS-"${BRANCH}"-KERNEL-"${CODENAME}"-"${DATE}".zip
     cd ..
 }
 
