@@ -10,8 +10,8 @@ sudo apt install -y python tmate ssh python2 patchelf binutils
 echo 'Essential stuff are installed successfully'
 
 # My Git Config
-git config --global user.email "sarthakroy2002@gmail.com"
-git config --global user.name "Sarthak Roy"
+git config --global user.email "juliyanto1071@student.untan.ac.id"
+git config --global user.name "Synchroz"
 echo 'Your Git config is set successfully'
 
 # Store my Git credentials (whenever needed to)
