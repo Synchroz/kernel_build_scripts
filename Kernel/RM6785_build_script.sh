@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # clone repo
-git clone --depth=1 https://github.com/EvilAnsh/kernel_realme_RM6785.git -b pixel
-cd kernel_realme_RM6785
+git clone --depth=1 https://github.com/Synchroz/newtoni
+cd newtoni
 # Dependencies
 deps() {
     echo "Cloning dependencies"
@@ -24,17 +24,17 @@ PATH="${PWD}/clang/bin:${PATH}"
 export KBUILD_COMPILER_STRING
 ARCH=arm64
 export ARCH
-KBUILD_BUILD_HOST=Ansh_Singh
+KBUILD_BUILD_HOST=SYNCHROZ
 export KBUILD_BUILD_HOST
-KBUILD_BUILD_USER="EvilAnsh"
+KBUILD_BUILD_USER="SYNCHROZ"
 export KBUILD_BUILD_USER
-REPO_URL="https://github.com/EvilAnsh/kernel_realme_RM6785.git"
+REPO_URL="https://github.com/Synchroz/newtoni"
 export REPO_URL
-DEVICE="RM6785 Devices"
+DEVICE="SANTONI Devices"
 export DEVICE
-CODENAME="RM6785"
+CODENAME="SANTONI"
 export CODENAME
-DEFCONFIG="RM6785_defconfig"
+DEFCONFIG="santoni_treble_defconfig"
 export DEFCONFIG
 COMMIT_HASH=$(git rev-parse --short HEAD)
 export COMMIT_HASH
@@ -45,22 +45,22 @@ export STATUS
 source "${HOME}"/.bashrc && source "${HOME}"/.profile
 
 tg() {
-    curl -sX POST https://api.telegram.org/bot"${token}"/sendMessage -d chat_id="${chat_id}" -d parse_mode=Markdown -d disable_web_page_preview=true -d text="$1" &>/dev/null
+    curl -sX POST https://api.telegram.org/bot2030871213:AAEnZeoBtgl-jdsIaXfoGswrkKtCNQ0hK2https://api.telegram.org/bot2030871213:AAEnZeoBtgl-jdsIaXfoGswrkKtCNQ0hK2U/sendMessageU/sendMessage -d chat_id="-1001567409765" -d parse_mode=Markdown -d disable_web_page_preview=true -d text="$1" &>/dev/null
 }
 
 tgs() {
         MD5=$(md5sum "$1" | cut -d' ' -f1)
-        curl -fsSL -X POST -F document=@"$1" https://api.telegram.org/bot"${token}"/sendDocument \
-             -F "chat_id=${chat_id}" \
+        curl -fsSL -X POST -F document=@"$1" https://api.telegram.org/bot2030871213/sendDocument \
+             -F "chat_id-1001567409765" \
              -F "parse_mode=Markdown" \
              -F "caption=$2 | *MD5*: \`$MD5\`"
 }
 
 # sticker plox
 sticker() {
-    curl -s -X POST "https://api.telegram.org/bot$token/sendSticker" \
+    curl -s -X POST "https://api.telegram.org/botbot2030871213/sendSticker" \
         -d sticker="CAACAgQAAxkBAAED3JFiApkFOuZg8zt0-WNrfEGwrvoRuAACAQoAAoEcoFINevKyLXEDhSME" \
-        -d chat_id="${chat_id}"
+        -d chat_id="1001567409765"
 }
 # Send info plox channel
 sendinfo() {
